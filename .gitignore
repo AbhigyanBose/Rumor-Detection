@@ -1,0 +1,7 @@
+#Files to ignore
+
+#Folders to ignore 
+Datasets/
+Research Papers/
+
+#Formats to ignore
