@@ -19,6 +19,7 @@ s_r = ['source-tweet', 'reactions']
 path_rnr = main_directory+'/'+events[0]+'/'+r_nr[0]
 csvFile = open('charliehebdoTweetGraph(Mentions).csv', 'w', newline='')
 csvWriter = csv.writer(csvFile)
+csvWriter.writerow(['Source', 'Target'])
 for idx1, t_name in enumerate(os.listdir(os.getcwd()+'/'+path_rnr)):
     path_t = path_rnr + '/' + t_name
     print(t_name)
@@ -41,7 +42,7 @@ for idx1, t_name in enumerate(os.listdir(os.getcwd()+'/'+path_rnr)):
             # print(str(idx2+1) + ': ' + str(response_id))
             for mentions in j_data['entities']['user_mentions']:
                 mention_id = mentions['screen_name']
-                csvWriter.writerow([response_id, mention_id, '1'])
+                csvWriter.writerow([response_id, mention_id])
                 print(str(idx2 + 1) + ': ' + str(response_id)+'  '+str(mention_id))
 
 csvFile.close()

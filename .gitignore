@@ -1,8 +1,10 @@
 #Files to ignore
 
+
 #Folders to ignore 
 Datasets/
 Research Papers/
 .idea/
 
 #Formats to ignore
+generate?.py
